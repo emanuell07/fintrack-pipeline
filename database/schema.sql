@@ -34,3 +34,14 @@ CREATE TABLE transacoes (
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS financial_summary (
+    id SERIAL PRIMARY KEY,
+    usuario_id INTEGER REFERENCES usuarios(id),
+    ano INTEGER NOT NULL,
+    mes INTEGER NOT NULL,
+    receita NUMERIC(12,2) DEFAULT 0,
+    despesa NUMERIC(12,2) DEFAULT 0,
+    saldo_liquido NUMERIC(12,2) DEFAULT 0,
+    atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE (usuario_id, ano, mes)
+);
