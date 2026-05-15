@@ -4,3 +4,8 @@ pandas
 fastapi
 uvicorn
 sqlalchemy
+streamlit
+plotly
+requests
+pytest
+httpx

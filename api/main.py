@@ -10,7 +10,7 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:8501"],  # origem do Streamlit
+    allow_origins=["http://localhost:8501"],  # origem do Str
     allow_credentials=True,
     allow_methods=["GET"],
     allow_headers=["X-API-Key", "Content-Type"],
