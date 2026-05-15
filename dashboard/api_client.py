@@ -19,3 +19,11 @@ def get_summary_by_usuario(usuario_id: int):
 def get_summary_by_mes(ano: int, mes: int):
     response = requests.get(f"{BASE_URL}/summary/mes/{ano}/{mes}", headers=HEADERS)
     return response.json()
+
+def get_categorias_by_usuario(usuario_id: int):
+    response = requests.get(f"{BASE_URL}/summary/categorias/{usuario_id}", headers=HEADERS)
+    return response.json()
+
+def get_totais_gerais():
+    response = requests.get(f"{BASE_URL}/summary/totais", headers=HEADERS)
+    return response.json()
